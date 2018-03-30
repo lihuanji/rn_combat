@@ -1,0 +1,42 @@
+{
+  "name": "rn_combat",
+  "version": "0.0.1",
+  "private": true,
+  "author": "lihuanji",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "tsc:watch": "tsc --watch",
+    "ios": "react-native run-ios",
+    "dev-ios": "npm run tsc:watch & npm run ios",
+    "lint": "tslint -c tslint.json 'web/**/*.{ts,tsx}'",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/react": "^16.1.0",
+    "@types/react-native": "^0.52.21",
+    "@types/react-navigation": "^1.5.1",
+    "@types/react-redux": "^5.0.15",
+    "@types/redux": "^3.6.31",
+    "@types/redux-thunk": "^2.1.0",
+    "immutable": "^3.8.2",
+    "react": "16.3.0-rc.0",
+    "react-native": "0.54.3",
+    "react-navigation": "^1.5.8",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.0-rc.0",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^5.1.0",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.8.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

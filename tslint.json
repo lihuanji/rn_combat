@@ -1,0 +1,102 @@
+{
+    "extends": [
+      "tslint:all",
+      "tslint-react",
+      "tslint-eslint-rules"
+    ],
+    "rules": {
+      // Don't want these
+      "cyclomatic-complexity": false,
+      "newline-before-return": false,
+      "no-parameter-properties": false,
+      "no-parameter-reassignment": false,
+      "no-unused-variable": false,
+      // 强制JS单引号
+      "quotemark": [true, "single", "jsx-double"],
+      // 取消按字母顺序引入
+      "object-literal-sort-keys": false,
+      "ordered-imports": false,
+      // 取消不能默认导出
+      "no-default-export": false,
+      // 取消私有属性和公有属性排序
+      "member-ordering": false,
+      // TODO: Enable stricter options for these
+      "comment-format": [
+          true,
+          "check-space"
+      ],
+      "member-access": true,
+      "only-arrow-functions": [
+          true,
+          "allow-declarations",
+          "allow-named-functions"
+      ],
+
+      // TODO: Enable these
+      "completed-docs": false,
+      "no-any": false,
+      "no-magic-numbers": false,
+      "no-non-null-assertion": false,
+      "no-null-keyword": false,
+      "no-require-imports": false,
+      "no-unbound-method": false,
+      "no-unnecessary-qualifier": false,
+      "no-use-before-declare": false,
+      "no-void-expression": false,
+      "prefer-function-over-method": false,
+      "strict-type-predicates": false,
+      "triple-equals": [true, "allow-undefined-check"],
+      "typedef": false,
+      "ban": [true,
+        ["describe", "only"],
+        ["it", "only"]
+      ],
+      "interface-name": false,
+      "file-header": [true,
+        "@author"
+      ],
+      "max-classes-per-file": false,
+      "max-line-length": [true, 140],
+      "newline-per-chained-call": false,
+      "no-console": {
+        "options": ["log"]
+      },
+      "no-switch-case-fall-through": true,
+      "strict-boolean-expressions": [true, "allow-boolean-or-undefined"],
+      "switch-default": false,
+      "variable-name": [true,
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore",
+        "allow-pascal-case"
+      ],
+      // eslint 
+      "indent": [
+        2,
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "object-curly-spacing": 0,
+      "react/jsx-indent": [
+        2,
+        4
+      ],
+      "react/jsx-indent-props": [
+        2,
+        4
+      ],
+      "arrow-parens": 0,
+      "linebreak-style": 0,
+      "react/jsx-filename-extension": [
+          "error",
+          {
+              "extensions": [
+                ".js",
+                ".jsx"
+              ]
+          }
+      ]
+    }
+  }
