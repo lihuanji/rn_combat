@@ -20,6 +20,8 @@
       "no-default-export": false,
       // 取消私有属性和公有属性排序
       "member-ordering": false,
+      // 关闭需要在package里面找到依赖
+      "no-implicit-dependencies": false,
       // TODO: Enable stricter options for these
       "comment-format": [
           true,

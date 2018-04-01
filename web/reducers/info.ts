@@ -5,7 +5,7 @@
  */
 import ActionType from '../actions/ActionType';
 
-export default (info: string = 'init', action: {type: string; payload: string}) => {
+export default (info: string = 'init', action: {type: string; payload?: string}) => {
     switch (action.type) {
         case ActionType.CHANGE_INFO:
             return action.payload;

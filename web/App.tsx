@@ -30,7 +30,7 @@ const Tab = TabNavigator({
     list: {
         screen: ListView,
         navigationOptions: () => ({
-            tabBarLabel: '列表',
+            tabBarLabel: '列表11',
         }),
     },
 });
