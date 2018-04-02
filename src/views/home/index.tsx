@@ -9,6 +9,7 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 import { changeInfo } from '../../actions/info';
+import { fetchDreamUntie } from '../../actions/dream';
 import styles from './style';
 
 // const resetAction = NavigationActions.reset({
@@ -20,7 +21,9 @@ import styles from './style';
 
 interface Props {
     readonly info: string;
+    readonly dream: object;
     changeInfo(newInfo: string): any;
+    fetchDreamUntie(q: string): any;
 }
 
 class Index extends Component<Props> {
@@ -29,7 +32,7 @@ class Index extends Component<Props> {
         this.onClick = this.onClick.bind(this);
     }
     private onClick() {
-        this.props.changeInfo(`${new Date()}`);
+        this.props.fetchDreamUntie('蛇');
     }
     public render() {
         return (
@@ -45,8 +48,10 @@ class Index extends Component<Props> {
 export default connect(
     (state: Props) => ({
         info: state.info,
+        dream: state.dream,
     }),
     (dispatch) => ({
         changeInfo: (newInfo: string) => (dispatch(changeInfo(newInfo))),
+        fetchDreamUntie: (q: string) => (fetchDreamUntie(q)(dispatch)),
     }),
 )(Index);

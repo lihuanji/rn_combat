@@ -58,7 +58,7 @@
     "skipLibCheck": true  // 删除GeolocationStatic警告 https://github.com/DefinitelyTyped/DefinitelyTyped/issues/24573
   },
   "include": [
-    "web"
+    "src"
   ],
   "exclude": [
     "node_modules"

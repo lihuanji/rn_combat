@@ -5,4 +5,5 @@
  */
 export default {
     CHANGE_INFO: 'CHANGE_INFO',
+    GET_DREAM_QUERY: 'GET_DREAM_QUERY',
 };
