@@ -23,7 +23,7 @@ class List extends Component<Props> {
     public render() {
         return (
             <View style={styles.container}>
-                <Text>List11122</Text>
+                <Text>List</Text>
             </View>
         );
     }
