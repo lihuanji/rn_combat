@@ -1,6 +1,6 @@
 /**
- * @file 首页css
- * @name index.style.js
+ * @file 列表页css
+ * @name list.style.js
  * @author lihuanji
  */
 

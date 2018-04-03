@@ -10,7 +10,7 @@ export default (state: object = {}, action: {type: string; payload?: object}) =>
         case ActionType.GET_DREAM_QUERY:
             return {
                 ...state,
-                ...action.payload,
+                data: action.payload,
             };
         default:
             return state;

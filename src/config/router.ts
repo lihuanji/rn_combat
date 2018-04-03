@@ -3,24 +3,25 @@
  * @name router.ts
  * @author lihuanji
  */
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 // 页面
 import HomeView from '../views/home/index';
-import ListView from '../views/list/index';
+import DreamDetail from '../views/dreamDetail/index';
 
-const Tab = TabNavigator({
+const Views = StackNavigator({
     home: {
         screen: HomeView,
-        navigationOptions: () => ({
-            tabBarLabel: '首页',
-        }),
+        navigationOptions: {
+            headerStyle: {
+                height: 0,
+                backgroundColor: '#F5FCFF',
+            },
+            // headerTransparent: true,
+        },
     },
-    list: {
-        screen: ListView,
-        navigationOptions: () => ({
-            tabBarLabel: '列表11',
-        }),
+    DreamDetail: {
+        screen: DreamDetail,
     },
 });
 
-export default Tab;
+export default Views;
