@@ -4,7 +4,7 @@
  * @author lihuanji
  */
 import React, { Component } from 'react';
-import { View, Text, Button, TextInput, StatusBar } from 'react-native';
+import { View, Text, Button, TextInput, ActivityIndicator } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 import { fetchDreamUntie } from '../../actions/dream';
@@ -37,8 +37,7 @@ class Index extends Component<Props> {
 
     public render() {
         return (
-            <View style={styles.container}>
-                <StatusBar backgroundColor="#F5FCFF" />
+            <SafeView>
                 <View style={styles.searchView}>
                     <TextInput
                         style={styles.searchInput}
@@ -47,7 +46,9 @@ class Index extends Component<Props> {
                     />
                 </View>
                 <Button title="查询" onPress={this.onClick}/>
-            </View>
+
+                <ActivityIndicator />
+            </SafeView>
         );
     }
 }

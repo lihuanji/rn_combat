@@ -5,9 +5,14 @@
  */
 
 import React, { Component } from 'react';
-import { View, Dimensions, Platform, StyleSheet, PlatformIOSStatic } from 'react-native';
+import { View, Dimensions, Platform, StyleSheet } from 'react-native';
 
-class SafeView extends Component {
+interface Props {
+    style?: object;
+    color?: string;
+}
+
+class SafeView extends Component<Props> {
     private getHeight() {
         const dimen = Dimensions.get('window');
         let height = 0;
@@ -19,17 +24,20 @@ class SafeView extends Component {
                 height = 50;
             }
         }
-
         return StyleSheet.create({
             view: {
                 paddingTop: height,
+                backgroundColor: this.props.color,
+                ...this.props.style,
             },
         });
     }
 
     public render() {
         return(
-            <View style={this.getHeight().view}>
+            <View
+                style={this.getHeight().view}
+            >
                 {this.props.children}
             </View>
         );

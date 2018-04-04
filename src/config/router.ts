@@ -14,9 +14,10 @@ const Views = StackNavigator({
         navigationOptions: {
             headerStyle: {
                 height: 0,
-                backgroundColor: '#F5FCFF',
+                // backgroundColor: '#F5FCFF',
+                borderBottomWidth: 0,
             },
-            // headerTransparent: true,
+            headerTransparent: true,
         },
     },
     DreamDetail: {

@@ -7,18 +7,25 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 // 页面
 import DreamView from '../dream/index';
 import FortuneView from '../fortune/index';
+import TodayView from '../today/index';
 
 const Tab = TabNavigator({
     home: {
         screen: DreamView,
-        navigationOptions: () => ({
-            tabBarLabel: '周公解梦',
-        }),
+        navigationOptions: {
+            tabBarLabel: '11',
+        },
     },
-    list: {
+    fortune: {
         screen: FortuneView,
         navigationOptions: () => ({
-            tabBarLabel: '星座运势',
+            tabBarLabel: '22',
+        }),
+    },
+    today: {
+        screen: TodayView,
+        navigationOptions: () => ({
+            tabBarLabel: '33',
         }),
     },
 });
